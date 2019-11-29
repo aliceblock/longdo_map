@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:longdo_map/longdo_map.dart';
 
@@ -27,6 +28,25 @@ class _MyAppState extends State<MyApp> {
           onCreated: (controller) {
             _controller = controller;
           },
+        ),
+        floatingActionButton: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            FloatingActionButton(
+              child: Icon(Icons.zoom_in),
+              onPressed: () {
+                _controller.zoomIn();
+              },
+            ),
+            SizedBox(height: 10.0,),
+            FloatingActionButton(
+              child: Icon(Icons.zoom_out),
+              onPressed: () {
+                _controller.zoomOut();
+              },
+            )
+          ],
         ),
       ),
     );
