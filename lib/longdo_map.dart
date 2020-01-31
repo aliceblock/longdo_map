@@ -11,8 +11,18 @@ class LongdoMapController {
     _channel = MethodChannel("me.intception.longdo_map/$id");
   }
 
-  doSomething() {
-    _channel.invokeMethod("doSomething");
+  goToCurrentLocation() {
+    _channel.invokeMethod("goToCurrentLocation");
+  }
+
+  /* Zoom map in 1 step */
+  zoomIn() {
+    _channel.invokeMethod("zoomIn");
+  }
+
+  /* Zoom map out 1 step */
+  zoomOut() {
+    _channel.invokeMethod("zoomOut");
   }
 }
 
