@@ -33,6 +33,6 @@
 
         <meta-data
             android:name="longdo.map.key"
-            android:value="YOUR_API_KEY" />
+            android:value="5ede4b531b2cd2006cd1ea8fb07e07c4" />
     </application>
 </manifest>
